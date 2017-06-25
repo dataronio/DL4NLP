@@ -10,10 +10,15 @@ Intro NLP course with videos. This has **no deep learning**. But it is a good pr
 
 [Stanford CS 224D: Deep Learning for NLP class](http://cs224d.stanford.edu/syllabus.html)  
 [Richard Socher](https://scholar.google.com/citations?user=FaOcyfMAAAAJ&hl=en). (2016)  Class with syllabus, and slides.  
-Videos: [2015 lectures] (https://www.youtube.com/channel/UCsGC3XXF1ThHwtDo18d7WVw/videos) / [2016 lectures] (https://www.youtube.com/playlist?list=PLcGUo322oqu9n4i0X3cRJgKyVy7OkDdoi)   
+Videos: [2015 lectures](https://www.youtube.com/channel/UCsGC3XXF1ThHwtDo18d7WVw/videos) / [2016 lectures](https://www.youtube.com/playlist?list=PLcGUo322oqu9n4i0X3cRJgKyVy7OkDdoi)   
 
 [A Primer on Neural Network Models for Natural Language Processing](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)  
 Yoav Goldberg. October 2015. No new info, 75 page summary of state of the art.  
+
+[Oxford Deep Learning for NLP class](http://www.cs.ox.ac.uk/teaching/courses/2016-2017/dl/)  
+[Phil Blunsom](https://scholar.google.co.uk/citations?user=eJwbbXEAAAAJ&hl=en). (2017) Class by Deep Mind NLP Group.   
+Lecture slides, videos, and practicals: [Github Repository](https://github.com/oxford-cs-deepnlp-2017)  
+**Currently ongoing**  
 
 ## Word Vectors
 Resources about word vectors, aka word embeddings, and distributed representations for words.  
@@ -28,8 +33,7 @@ Mikolov et al. 2013. Word2Vec generates word vectors in an unsupervised way by a
 Skip-gram takes center word and predict outside words. Skip-gram is better for large datasets.  
 CBOW - takes outside words and predict the center word. CBOW is better for smaller datasets.  
 
-[Distributed Representations of Words and Phrases and their Compositionality]
-(http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)  
+[Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)  
 Mikolov et al. 2013. Learns vectors for phrases such as "New York Times." Includes optimizations for skip-gram: heirachical softmax, and negative sampling. Subsampling frequent words. (i.e. frequent words like "the" are skipped periodically to speed things up and improve vector for less frequently used words)  
 
 [Linguistic Regularities in Continuous Space Word Representations](http://www.aclweb.org/anthology/N13-1090)  
@@ -83,7 +87,7 @@ Joulin, Grave, Bojanowski, Mikolov 2016 Facebook AI Research.
 [FastText blog](https://research.facebook.com/blog/fasttext/)  
 [FastText Code](https://github.com/facebookresearch/fastText)  
 
-##Neural Machine Translation
+## Neural Machine Translation
 In 2014, neural machine translation (NMT) performance became comprable to state of the art statistical machine translation(SMT).  
 
 [Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](http://arxiv.org/pdf/1406.1078v3.pdf) ([abstract](https://arxiv.org/abs/1406.1078))    
@@ -143,7 +147,7 @@ Xu et al. 2015 Creates captions by feeding image into a CNN which feeds into hid
 
 [Open source implementation in TensorFlow](https://research.googleblog.com/2016/09/show-and-tell-image-captioning-open.html)  
 
-##Conversation modeling / Dialog
+## Conversation modeling / Dialog
 [Neural Responding Machine for Short-Text Conversation](http://arxiv.org/pdf/1503.02364v2.pdf)  
 Shang et al. 2015  Uses Neural Responding Machine.  Trained on Weibo dataset.  Achieves one round conversations with 75% appropriate responses.  
 
@@ -181,7 +185,9 @@ Article summary of state of the art, and challenges for chatbots.
 [Deep learning for chatbots. part 2](http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/)  
 Implements a retrieval based dialog agent using dual encoder lstm with TensorFlow, based on the Ubuntu dataset [[paper](http://arxiv.org/pdf/1506.08909v3.pdf)] includes [source code](https://github.com/dennybritz/chatbot-retrieval/)  
 
-##Memory and Attention Models
+[ParlAI](https://github.com/facebookresearch/ParlAI) A framework for training and evaluating AI models on a variety of openly available dialog datasets. Released by FaceBook.  
+
+## Memory and Attention Models
 Attention mechanisms allows the network to refer back to the input sequence, instead of forcing it to encode all information into one fixed-length vector.  - [Attention and Memory in Deep Learning and NLP](http://www.opendatascience.com/blog/attention-and-memory-in-deep-learning-and-nlp/)  
 
 [Memory Networks](http://arxiv.org/pdf/1410.3916v10.pdf) Weston et. al 2014, and 
