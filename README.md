@@ -5,20 +5,17 @@ State of the art resources for NLP sequence modeling tasks such as machine trans
 [My notes on neural networks, rnn, lstm](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)  
 
 ## Deep Learning for NLP 
-[Stanford Natural Language Processing](https://www.coursera.org/learn/nlp)  
-Intro NLP course with videos. This has **no deep learning**. But it is a good primer for traditional nlp. Covers topics such as [sentence segmentation](https://github.com/diasks2/pragmatic_segmenter), word tokenizing, word normalization, n-grams, named entity recognition, part of speech tagging.  **Currently not available**  
-
 [Stanford CS 224D: Deep Learning for NLP class](http://cs224d.stanford.edu/syllabus.html)  
-[Richard Socher](https://scholar.google.com/citations?user=FaOcyfMAAAAJ&hl=en). (2016)  Class with syllabus, and slides.  
-Videos: [2015 lectures](https://www.youtube.com/channel/UCsGC3XXF1ThHwtDo18d7WVw/videos) / [2016 lectures](https://www.youtube.com/playlist?list=PLcGUo322oqu9n4i0X3cRJgKyVy7OkDdoi)   
-
-[A Primer on Neural Network Models for Natural Language Processing](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)  
-Yoav Goldberg. October 2015. No new info, 75 page summary of state of the art.  
+[Richard Socher](https://scholar.google.com/citations?user=FaOcyfMAAAAJ&hl=en). Class with syllabus, and slides.  
+Videos: [2017 lectures](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)  
 
 [Oxford Deep Learning for NLP class](http://www.cs.ox.ac.uk/teaching/courses/2016-2017/dl/)  
 [Phil Blunsom](https://scholar.google.co.uk/citations?user=eJwbbXEAAAAJ&hl=en). (2017) Class by Deep Mind NLP Group.   
 Lecture slides, videos, and practicals: [Github Repository](https://github.com/oxford-cs-deepnlp-2017)  
-**Currently ongoing**  
+[2017 videos](https://www.youtube.com/playlist?list=PL613dYIGMXoZBtZhbyiBqb0QtgK6oJbpm)  
+
+[A Primer on Neural Network Models for Natural Language Processing](https://www.jair.org/media/4992/live-4992-9623-jair.pdf)  
+Yoav Goldberg. Submitted 9/2015, published 11/16. 75 page summary of state of the art.  
 
 ## Word Vectors
 Resources about word vectors, aka word embeddings, and distributed representations for words.  
@@ -56,6 +53,10 @@ ___
 [Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606v1.pdf)  
 Bojanowski, Grave, Joulin, Mikolov 2016  
 [FastText Code](https://github.com/facebookresearch/fastText)  
+
+[Advances in Pre-Training Distributed Word Representations](https://arxiv.org/abs/1712.09405)  
+T. Mikolov, E. Grave, P. Bojanowski, C. Puhrsch, A. Joulin 2017  
+[FastText library](https://fasttext.cc/) includes [English word vectors](https://fasttext.cc/docs/en/english-vectors.html)  
 
 ## Sentiment Analysis
 Thought vectors are numeric representations for sentences, paragraphs, and documents.  This concept is used for many text classification tasks such as sentiment analysis.      
@@ -141,12 +142,26 @@ Translations between untrained language pairs.
 
 Google has started [rolling out NMT](https://blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate/) to it's production system, and it's a [significant improvement](http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html?_r=0).  
 
-## Image Captioning
-[Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/pdf/1502.03044v3.pdf)  
-Xu et al. 2015 Creates captions by feeding image into a CNN which feeds into hidden state of an RNN that generates the caption. At each time step the RNN outputs next word and the next location to pay attention to via a probability over grid locations. Uses 2 types of attention soft and hard. Soft attention uses gradient descent and backprop and is deterministic. Hard attention selects the element with highest probability. Hard attention uses reinforcement learning, rather than backprop and is stochastic.  
+[Convolutional Sequence to Sequence Learning](https://arxiv.org/abs/1705.03122)  
+Gehring et al. 2017 Facebook AI research 
+[blog post](https://code.facebook.com/posts/1978007565818999/a-novel-approach-to-neural-machine-translation/)  
+Architecture: Convolutional sequence to sequence. ConvS2s.  
+Results: "We outperform the accuracy of the deep LSTM setup of Wu et al. (2016) on both WMT'14 English-German and WMT'14 English-French translation at an order of magnitude faster speed, both on GPU and CPU."
+  
+[Facebook is transitioning entirely to neural machine translation](https://code.facebook.com/posts/289921871474277/transitioning-entirely-to-neural-machine-translation/)
+  
+[Transformer: A Novel Neural Network Architecture for Language Understanding](https://research.googleblog.com/2017/08/transformer-novel-neural-network.html)  
+Arcitecture: Transformer, a T2T model introduced by Google in [Attention is all you need](https://arxiv.org/abs/1706.03762)  
+Results: "we show that the Transformer outperforms both recurrent and convolutional models on academic English to German and English to French translation benchmarks."  
+[T2T Source code](https://github.com/tensorflow/tensor2tensor)  
+[T2T blog post](https://research.googleblog.com/2017/06/accelerating-deep-learning-research.html)   
 
-[Open source implementation in TensorFlow](https://research.googleblog.com/2016/09/show-and-tell-image-captioning-open.html)  
+[Universal Transformer](https://ai.googleblog.com/2018/08/moving-beyond-translation-with.html)  
+8/15/18 Google increases BLEU score by 1 and uses universal tranformer in other domains besides translation.  
 
+[DeepL Translator](https://www.deepl.com/translator) claims to [outperform competitors](https://www.deepl.com/press.html) but doesn't disclose their architecture.
+"Specific details of our network architecture will not be published at this time. DeepL Translator is based on a single, non-ensemble model."  
+  
 ## Conversation modeling / Dialog
 [Neural Responding Machine for Short-Text Conversation](http://arxiv.org/pdf/1503.02364v2.pdf)  
 Shang et al. 2015  Uses Neural Responding Machine.  Trained on Weibo dataset.  Achieves one round conversations with 75% appropriate responses.  
@@ -179,13 +194,18 @@ Li et al. 2016  Proposes persona-based models for handling the issue of speaker 
 [Deep Reinforcement Learning for Dialogue Generation](https://arxiv.org/pdf/1606.01541v3.pdf)  
 Li et al. 2016. Uses reinforcement learing to generate diverse responses. Trains 2 agents to chat with each other. Builds on seq2seq.   
 
+[Adversarial Learning for Neural Dialogue Generation](https://arxiv.org/pdf/1701.06547.pdf)  
+Li et al. 2017.  
+[Source code for Li papers](https://github.com/jiweil/Neural-Dialogue-Generation)  
 ___
 [Deep learning for chatbots](http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/)  
 Article summary of state of the art, and challenges for chatbots.  
 [Deep learning for chatbots. part 2](http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/)  
 Implements a retrieval based dialog agent using dual encoder lstm with TensorFlow, based on the Ubuntu dataset [[paper](http://arxiv.org/pdf/1506.08909v3.pdf)] includes [source code](https://github.com/dennybritz/chatbot-retrieval/)  
 
-[ParlAI](https://github.com/facebookresearch/ParlAI) A framework for training and evaluating AI models on a variety of openly available dialog datasets. Released by FaceBook.  
+[Chatbot and Related Research Paper Notes with Images](https://github.com/ricsinaruto/Seq2seqChatbots/wiki/Chatbot-and-Related-Research-Paper-Notes-with-Images)  
+
+[Neural Dialog Papers](https://github.com/snakeztc/NeuralDialogPapers)  
 
 ## Memory and Attention Models
 Attention mechanisms allows the network to refer back to the input sequence, instead of forcing it to encode all information into one fixed-length vector.  - [Attention and Memory in Deep Learning and NLP](http://www.opendatascience.com/blog/attention-and-memory-in-deep-learning-and-nlp/)  
