@@ -194,18 +194,23 @@ Li et al. 2016  Proposes persona-based models for handling the issue of speaker 
 [Deep Reinforcement Learning for Dialogue Generation](https://arxiv.org/pdf/1606.01541v3.pdf)  
 Li et al. 2016. Uses reinforcement learing to generate diverse responses. Trains 2 agents to chat with each other. Builds on seq2seq.   
 
-[Adversarial Learning for Neural Dialogue Generation](https://arxiv.org/pdf/1701.06547.pdf)  
-Li et al. 2017.  
-[Source code for Li papers](https://github.com/jiweil/Neural-Dialogue-Generation)  
+[Adversarial Learning for Neural Dialogue Generation](https://arxiv.org/abs/1701.06547)  
+Li et al. 2017  
+"We cast the task as a reinforcement learning (RL) problem where we jointly train two systems, a generative model to produce response sequences, and a discriminator—analagous to the human evaluator in the Turing test— to distinguish between the human-generated dialogues and the machine-generated ones. The outputs from the discriminator are then used as rewards for the generative model"
+They use REINFORCE algorithm (Williams 1992). They refine using Reward for Every Generation Step (REGS) which breaks up the response and gives rewards for the words individually rather than a single value. They also use "Teacher Forcing" to stablize the GAN, which provides a correct (human) response to train incorrect examples. Minimum nunber of words in response is 5.     
+Includes [source code](https://github.com/jiweil/Neural-Dialogue-Generation)  
+[Video explaining the paper](https://www.youtube.com/watch?v=8fA6qYG4jFc)  
+
 ___
 [Deep learning for chatbots](http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/)  
-Article summary of state of the art, and challenges for chatbots.  
+Article summary of state of the art, and challenges for chatbots from 2016.  
 [Deep learning for chatbots. part 2](http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/)  
 Implements a retrieval based dialog agent using dual encoder lstm with TensorFlow, based on the Ubuntu dataset [[paper](http://arxiv.org/pdf/1506.08909v3.pdf)] includes [source code](https://github.com/dennybritz/chatbot-retrieval/)  
 
 [Chatbot and Related Research Paper Notes with Images](https://github.com/ricsinaruto/Seq2seqChatbots/wiki/Chatbot-and-Related-Research-Paper-Notes-with-Images)  
 
-[Neural Dialog Papers](https://github.com/snakeztc/NeuralDialogPapers)  
+[Neural Dialog Papers](https://github.com/snakeztc/NeuralDialogPapers) - A list of papers about creating dialog systems using deep nets   
+
 
 ## Memory and Attention Models
 Attention mechanisms allows the network to refer back to the input sequence, instead of forcing it to encode all information into one fixed-length vector.  - [Attention and Memory in Deep Learning and NLP](http://www.opendatascience.com/blog/attention-and-memory-in-deep-learning-and-nlp/)  
